@@ -5,6 +5,12 @@ Changelog
 Version 0.1
 ===========
 
-- Feature A added
-- FIX: nasty bug #1729 fixed
-- add your changes here!
+- Added preprocessing pipeline for non linear feature generation
+- Trained deterministic catboost regressor
+- accuracy around 82%
+
+===========
+Version 0.2
+===========
+- to add uncertainty estimator
+- provide bounds on price predictions
