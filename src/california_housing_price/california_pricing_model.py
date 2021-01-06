@@ -1,3 +1,5 @@
+import os
+
 import joblib
 import numpy as np
 import pandas as pd
@@ -24,10 +26,14 @@ class CaliforniaPricingModel:
     methods for batch and single predictions are also available
     """
 
+    __location__ = os.path.realpath(
+        os.path.join(os.getcwd(), os.path.dirname(__file__))
+    )
+
     def __init__(
         self,
-        preprocess_model="models/preprocessor",
-        regressor="models/catboost_regressor",
+        preprocess_model=os.path.join(__location__, "models", "preprocessor"),
+        regressor=os.path.join(__location__, "models", "catboost_regressor"),
     ):
         self._preprocessor = joblib.load(preprocess_model)
         self._regressor = CatBoostRegressor()
