@@ -3,7 +3,18 @@ import numpy as np
 import pandas as pd
 from catboost import CatBoostRegressor
 
-from configs.data_config import DataConfig
+
+class DataConfig:
+    columns = [
+        "longitude",
+        "latitude",
+        "housing_median_age",
+        "total_rooms",
+        "total_bedrooms",
+        "population",
+        "households",
+        "median_income",
+    ]
 
 
 class CaliforniaPricingModel:
