@@ -32,3 +32,9 @@ dependencies:
   - nbstripout
   - sphinx
   - recommonmark
+  - lux
+  - catboost
+  - mlxtend
+  - gplearn
+  - lux-api
+  - lux
