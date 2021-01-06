@@ -39,7 +39,7 @@ def test_price_prediction(test_setup):
         6.0600e02,
         6.6085e00,
     ]
-    price_prediction = 410468.6598423
+    price_prediction = 441451.25438585
     price = test_setup.price_prediction(*house_features)
     assert price == pytest.approx(price_prediction)
 
@@ -50,4 +50,4 @@ def test_batch_prediction(test_setup, test_df_setup):
     y_data = test_data["median_house_value"]
     model = test_setup
     y_preds = model.batch_prediction(x_data)
-    assert 0.8209017351032162 == pytest.approx(r2_score(y_data, y_preds))
+    assert 0.8277017351032162 == pytest.approx(r2_score(y_data, y_preds), 1e-3)
