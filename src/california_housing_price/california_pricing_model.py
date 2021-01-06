@@ -97,3 +97,6 @@ class CaliforniaPricingModel:
             self._regressor.predict(self._preprocessor.transform(x_data_df))
         )
         return predicted_price
+
+
+model = CaliforniaPricingModel()
